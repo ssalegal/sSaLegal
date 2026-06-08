@@ -2,79 +2,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>sSa Legal | Sunil Sharma, Advocate</title>
 
 <style>
+:root{
+  --dark:#05070b;
+  --navy:#08111f;
+  --navy2:#0d1a2b;
+  --gold:#c9a24a;
+  --gold2:#e6c76f;
+  --red:#b1121b;
+  --cream:#f7f2e9;
+  --white:#fff;
+  --text:#151515;
+  --muted:#cfc7b6;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--dark:#05070b;--navy:#07101c;--gold:#c79b45;--red:#b1121b;--light:#f7f3ec;--text:#111}
-body{font-family:Georgia,serif;background:var(--light);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
 html{scroll-behavior:smooth}
-
-/* Animations */
-.fade{animation:fadeUp .9s ease both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-a,button,.card,.logo img{transition:.25s ease}
-a:hover,button:hover{color:var(--gold)}
-.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,.12)}
-.logo img:hover{transform:scale(1.04)}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--text);line-height:1.65}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
 
 /* Disclaimer */
-#disclaimer{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}
-.disclaimer-box{background:#fff;max-width:850px;max-height:88vh;overflow:auto;padding:34px;border-radius:10px;box-shadow:0 20px 80px rgba(0,0,0,.4)}
-.disclaimer-box h2{margin-bottom:16px;color:#111}
-.disclaimer-box p{margin-bottom:14px;font-size:15px}
+#disclaimer{position:fixed;inset:0;background:rgba(0,0,0,.86);z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px}
+.disclaimer-box{background:#fff;max-width:900px;max-height:88vh;overflow:auto;padding:34px;border-radius:12px;border-top:5px solid var(--gold);box-shadow:0 25px 90px rgba(0,0,0,.45)}
+.disclaimer-box h2{font-size:28px;margin-bottom:16px}
+.disclaimer-box p{font-size:15px;margin-bottom:13px}
 .disclaimer-actions{display:flex;gap:14px;margin-top:22px}
-.disclaimer-actions button{border:0;padding:12px 22px;cursor:pointer;font-weight:bold}
+.disclaimer-actions button{border:0;padding:12px 24px;font-weight:bold;cursor:pointer}
 .agree{background:var(--gold);color:#111}
 .decline{background:#222;color:#fff}
 
 /* Header */
-header{position:sticky;top:0;z-index:99;background:rgba(5,7,11,.96);color:white;padding:14px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(199,155,69,.25)}
-.logo img{height:68px;display:block}
-nav{display:flex;gap:24px;align-items:center;font-family:Arial,sans-serif;font-size:14px}
-.nav-item{position:relative;padding:16px 0}
-.dropdown{display:none;position:absolute;top:48px;left:0;background:#080d16;color:white;min-width:250px;border:1px solid rgba(199,155,69,.35);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+header{position:sticky;top:0;z-index:100;background:rgba(5,7,11,.96);backdrop-filter:blur(10px);color:white;border-bottom:1px solid rgba(201,162,74,.25)}
+.header-inner{max-width:1220px;margin:auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo img{height:66px;display:block;transition:.25s}
+.logo img:hover{transform:scale(1.03);filter:drop-shadow(0 0 8px rgba(201,162,74,.5))}
+nav{display:flex;gap:25px;align-items:center;font-family:Arial,sans-serif;font-size:14px}
+.nav-item{position:relative;padding:18px 0;cursor:pointer}
+nav a,.nav-item span{position:relative}
+nav a:after,.nav-item span:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.25s}
+nav a:hover:after,.nav-item:hover span:after{width:100%}
+.dropdown{display:none;position:absolute;top:54px;left:0;background:#080d16;min-width:270px;border:1px solid rgba(201,162,74,.35);box-shadow:0 18px 40px rgba(0,0,0,.35)}
 .dropdown a{display:block;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-item:hover .dropdown{display:block}
+.menu-btn{display:none;background:none;border:1px solid rgba(201,162,74,.5);color:white;padding:8px 12px;font-size:22px}
 
 /* Hero */
-.hero{background:linear-gradient(120deg,#05070b,#091421);color:white;padding:90px 7%;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.hero{background:radial-gradient(circle at top right,rgba(201,162,74,.18),transparent 35%),linear-gradient(120deg,#05070b,#091421);color:white}
+.hero-inner{max-width:1220px;margin:auto;padding:96px 24px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .tag{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:13px;margin-bottom:18px;font-family:Arial,sans-serif}
 .hero h1{font-size:58px;line-height:1.08;margin-bottom:22px}
-.hero p{font-size:19px;color:#ddd;max-width:680px}
-.btn{display:inline-block;margin-top:30px;background:var(--gold);color:#111;padding:13px 24px;font-weight:bold;font-family:Arial,sans-serif}
+.hero p{font-size:19px;color:#ddd;max-width:690px}
+.btn{display:inline-block;margin-top:30px;background:var(--gold);color:#111;padding:13px 24px;font-weight:bold;font-family:Arial,sans-serif;transition:.25s}
+.btn:hover{transform:translateY(-3px);background:var(--gold2)}
 .ghost{background:transparent;color:white;border:1px solid var(--gold);margin-left:12px}
-.hero-panel{border:1px solid rgba(199,155,69,.35);padding:32px;background:rgba(255,255,255,.04)}
+.hero-panel{border:1px solid rgba(201,162,74,.35);padding:34px;background:rgba(255,255,255,.045);box-shadow:0 20px 60px rgba(0,0,0,.25)}
 .hero-panel h2{color:var(--gold);margin-bottom:10px}
 
 /* Sections */
-section{padding:75px 7%}
+section{padding:76px 24px}
+.wrap{max-width:1220px;margin:auto}
 .center{text-align:center}
 h2{font-size:36px;margin-bottom:15px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}
-.card{background:white;padding:28px;border:1px solid #eee;box-shadow:0 8px 20px rgba(0,0,0,.04)}
+.card{background:white;padding:28px;border:1px solid #eee;box-shadow:0 8px 20px rgba(0,0,0,.04);transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(0,0,0,.12)}
 .card h3{margin-bottom:10px;color:#07101c}
-.about{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
 .updates{background:#f0ebe2}
 .contact{background:#fff}
-.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-footer{background:#05070b;color:white;padding:34px 7%;font-size:13px;color:#ccc}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+footer{background:#05070b;color:#ccc;padding:34px 24px;font-size:13px}
+footer .wrap{display:grid;gap:8px}
 footer strong{color:white}
 
+/* Animation */
+.fade{opacity:0;transform:translateY(18px);animation:fadeUp .8s ease forwards}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+/* Tablet */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:32px;padding:78px 28px}
+  .hero h1{font-size:50px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  nav{gap:16px;font-size:13px}
+  .logo img{height:58px}
+}
+
 /* Mobile */
-@media(max-width:850px){
-header{display:block}
-.logo img{height:58px}
-nav{display:block;margin-top:12px}
-.nav-item{display:block;padding:8px 0}
-.dropdown{position:static;display:block;margin-top:6px}
-.hero,.about,.contact-box{grid-template-columns:1fr}
-.hero h1{font-size:42px}
-.grid{grid-template-columns:1fr}
-.ghost{margin-left:0}
+@media(max-width:760px){
+  .header-inner{padding:10px 16px}
+  .logo img{height:46px}
+  .menu-btn{display:block}
+  nav{display:none;width:100%;padding:12px 0 4px}
+  nav.open{display:block}
+  .header-inner{flex-wrap:wrap}
+  .nav-item,nav a{display:block;padding:10px 0}
+  .dropdown{display:block;position:static;min-width:100%;box-shadow:none;background:#0c1320;margin-top:7px}
+  .dropdown a{padding:10px 14px;font-size:13px}
+  .hero-inner{padding:58px 18px}
+  .hero h1{font-size:38px}
+  .hero p{font-size:17px}
+  .hero-panel{padding:24px}
+  .btn{display:block;text-align:center;margin-top:18px}
+  .ghost{margin-left:0}
+  section{padding:58px 18px}
+  h2{font-size:30px}
+  .grid,.about-grid,.contact-box{grid-template-columns:1fr}
+  .disclaimer-box{padding:24px}
+  .disclaimer-actions{flex-direction:column}
+}
+
+/* Small mobile */
+@media(max-width:420px){
+  .hero h1{font-size:34px}
+  .tag{font-size:11px}
+  .card{padding:23px}
 }
 </style>
 </head>
@@ -96,107 +143,131 @@ nav{display:block;margin-top:12px}
 </div>
 
 <header>
-  <div class="logo fade"><img src="logo.png" alt="sSa Legal"></div>
-  <nav>
-    <div class="nav-item">Practice Areas
-      <div class="dropdown">
-        <a href="#family">Family & Matrimonial Law</a>
-        <a href="#criminal">Criminal Defense</a>
-        <a href="#property">Property & Documentation</a>
-        <a href="#consumer">Consumer Litigation</a>
-        <a href="#banking">Insurance & Banking Litigation</a>
+  <div class="header-inner">
+    <a class="logo" href="#"><img src="logo.png" alt="sSa Legal"></a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+      <div class="nav-item"><span>Practice Areas</span>
+        <div class="dropdown">
+          <a href="#family">Family & Matrimonial Law</a>
+          <a href="#criminal">Criminal Defense</a>
+          <a href="#property">Property & Documentation</a>
+          <a href="#consumer">Consumer Litigation</a>
+          <a href="#banking">Insurance & Banking Litigation</a>
+        </div>
       </div>
-    </div>
-    <div class="nav-item">Investigations
-      <div class="dropdown">
-        <a href="#opinions">Legal Opinions</a>
-        <a href="#investigations">Legal Investigations</a>
-        <a href="#title">Document and Title Search</a>
-        <a href="#diligence">Legal Due Diligence</a>
-        <a href="#financial">Financial Due Diligence</a>
+
+      <div class="nav-item"><span>Investigations</span>
+        <div class="dropdown">
+          <a href="#opinions">Legal Opinions</a>
+          <a href="#investigations">Legal Investigations</a>
+          <a href="#title">Document and Title Search</a>
+          <a href="#diligence">Legal Due Diligence</a>
+          <a href="#financial">Financial Due Diligence</a>
+        </div>
       </div>
-    </div>
-    <div class="nav-item">Legal Updates
-      <div class="dropdown">
-        <a href="#updates">Newsletters</a>
-        <a href="#updates">Legal Updates</a>
+
+      <div class="nav-item"><span>Legal Updates</span>
+        <div class="dropdown">
+          <a href="#updates">Newsletters</a>
+          <a href="#updates">Legal Updates</a>
+        </div>
       </div>
-    </div>
-    <a href="#contact">Contact</a>
-  </nav>
+
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <div class="hero">
-  <div class="fade">
-    <div class="tag">Strategic Litigation. Practical Solutions.</div>
-    <h1>Effective Advocacy.<br>Practical Solutions.</h1>
-    <p>Litigation, advisory and legal investigation services across Punjab, Haryana, Chandigarh, Delhi and beyond.</p>
-    <a class="btn" href="#contact">Contact</a>
-    <a class="btn ghost" href="#practice">Explore Practice Areas</a>
-  </div>
-  <div class="hero-panel fade">
-    <h2>Sunil Sharma, Advocate</h2>
-    <p>17+ years of litigation experience before District Courts, Tribunals, the Punjab & Haryana High Court, Delhi High Court and the Supreme Court of India.</p>
+  <div class="hero-inner">
+    <div class="fade">
+      <div class="tag">Strategic Litigation. Practical Solutions.</div>
+      <h1>Effective Advocacy.<br>Practical Solutions.</h1>
+      <p>Litigation, advisory and legal investigation services across Punjab, Haryana, Chandigarh, Delhi and beyond.</p>
+      <a class="btn" href="#contact">Contact</a>
+      <a class="btn ghost" href="#practice">Explore Practice Areas</a>
+    </div>
+
+    <div class="hero-panel fade">
+      <h2>Sunil Sharma, Advocate</h2>
+      <p>17+ years of litigation experience before District Courts, Tribunals, the Punjab & Haryana High Court, Delhi High Court and the Supreme Court of India.</p>
+    </div>
   </div>
 </div>
 
-<section id="practice" class="center">
-  <div class="tag">Practice Areas</div>
-  <h2>Areas of Expertise</h2>
-  <div class="grid">
-    <div class="card" id="family"><h3>Family & Matrimonial Law</h3><p>Divorce, maintenance, custody, domestic violence and matrimonial disputes.</p></div>
-    <div class="card" id="criminal"><h3>Criminal Defense</h3><p>Bail, quashing, trial defense, criminal appeals and related proceedings.</p></div>
-    <div class="card" id="property"><h3>Property & Documentation</h3><p>Property disputes, sale deeds, agreements, title verification and legal notices.</p></div>
-    <div class="card" id="consumer"><h3>Consumer Litigation</h3><p>Deficiency in service, unfair trade practices and consumer protection matters.</p></div>
-    <div class="card" id="banking"><h3>Insurance & Banking Litigation</h3><p>Insurance disputes, claim scrutiny, banking complaints and allied proceedings.</p></div>
-    <div class="card" id="opinions"><h3>Legal Opinions</h3><p>Structured legal opinions based on facts, documents, applicable law and field verification.</p></div>
+<section id="practice">
+  <div class="wrap center">
+    <div class="tag">Practice Areas</div>
+    <h2>Areas of Expertise</h2>
+
+    <div class="grid">
+      <div class="card" id="family"><h3>Family & Matrimonial Law</h3><p>Divorce, maintenance, custody, domestic violence and matrimonial disputes.</p></div>
+      <div class="card" id="criminal"><h3>Criminal Defense</h3><p>Bail, quashing, trial defense, criminal appeals and related proceedings.</p></div>
+      <div class="card" id="property"><h3>Property & Documentation</h3><p>Property disputes, sale deeds, agreements, title verification and legal notices.</p></div>
+      <div class="card" id="consumer"><h3>Consumer Litigation</h3><p>Deficiency in service, unfair trade practices and consumer protection matters.</p></div>
+      <div class="card" id="banking"><h3>Insurance & Banking Litigation</h3><p>Insurance disputes, claim scrutiny, banking complaints and allied proceedings.</p></div>
+      <div class="card" id="opinions"><h3>Legal Opinions</h3><p>Structured legal opinions based on facts, documents, applicable law and field verification.</p></div>
+    </div>
   </div>
 </section>
 
 <section class="about">
-  <div class="fade">
-    <div class="tag">Investigations</div>
-    <h2>Legal Investigation Services</h2>
-    <p>sSa Legal assists in legal investigation, document scrutiny, title search, claim verification, legal due diligence and financial due diligence for domestic and international assignments.</p>
-  </div>
-  <div>
-    <div class="card" id="investigations"><h3>Legal Investigations</h3><p>Fact verification, field inquiries and structured reporting.</p></div><br>
-    <div class="card" id="title"><h3>Document and Title Search</h3><p>Verification of records, certificates, ownership documents and supporting papers.</p></div><br>
-    <div class="card" id="diligence"><h3>Legal Due Diligence</h3><p>Assessment of legal risk, compliance and document reliability.</p></div><br>
-    <div class="card" id="financial"><h3>Financial Due Diligence</h3><p>Review of financial dependency, claim background and supporting material.</p></div>
+  <div class="wrap about-grid">
+    <div>
+      <div class="tag">Investigations</div>
+      <h2>Legal Investigation Services</h2>
+      <p>sSa Legal assists in legal investigation, document scrutiny, title search, claim verification, legal due diligence and financial due diligence for domestic and international assignments.</p>
+    </div>
+
+    <div>
+      <div class="card" id="investigations"><h3>Legal Investigations</h3><p>Fact verification, field inquiries and structured reporting.</p></div><br>
+      <div class="card" id="title"><h3>Document and Title Search</h3><p>Verification of records, certificates, ownership documents and supporting papers.</p></div><br>
+      <div class="card" id="diligence"><h3>Legal Due Diligence</h3><p>Assessment of legal risk, compliance and document reliability.</p></div><br>
+      <div class="card" id="financial"><h3>Financial Due Diligence</h3><p>Review of financial dependency, claim background and supporting material.</p></div>
+    </div>
   </div>
 </section>
 
 <section id="updates" class="updates">
-  <div class="tag">Legal Updates & Newsletters</div>
-  <h2>Recent Legal Notes</h2>
-  <div class="grid">
-    <div class="card"><h3>Maintenance Law</h3><p>Updates and notes on interim maintenance, disclosure affidavits and dependency.</p></div>
-    <div class="card"><h3>Matrimonial Litigation</h3><p>Case notes on divorce, custody, residence rights and related proceedings.</p></div>
-    <div class="card"><h3>Investigation Insights</h3><p>Practical notes on document verification, claim scrutiny and field inquiries.</p></div>
+  <div class="wrap">
+    <div class="tag">Legal Updates & Newsletters</div>
+    <h2>Recent Legal Notes</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Maintenance Law</h3><p>Updates and notes on interim maintenance, disclosure affidavits and dependency.</p></div>
+      <div class="card"><h3>Matrimonial Litigation</h3><p>Case notes on divorce, custody, residence rights and related proceedings.</p></div>
+      <div class="card"><h3>Investigation Insights</h3><p>Practical notes on document verification, claim scrutiny and field inquiries.</p></div>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <div class="tag">Contact</div>
-  <h2>sSa Legal</h2>
-  <div class="contact-box">
-    <div>
-      <h3>Sunil Sharma, Advocate</h3>
-      <p><strong>Email:</strong> office@ssalegal.net</p>
-      <p><strong>Contact:</strong> +91-94641-50001</p>
-    </div>
-    <div>
-      <h3>Address</h3>
-      <p>Chamber No. 514, Yadwindra Complex<br>
-      District Courts, Patiala, Punjab - 147001</p>
+  <div class="wrap">
+    <div class="tag">Contact</div>
+    <h2>sSa Legal</h2>
+
+    <div class="contact-box">
+      <div>
+        <h3>Sunil Sharma, Advocate</h3>
+        <p><strong>Email:</strong> office@ssalegal.net</p>
+        <p><strong>Contact:</strong> +91-94641-50001</p>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <p>Chamber No. 514, Yadwindra Complex<br>
+        District Courts, Patiala, Punjab - 147001</p>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p><strong>sSa Legal | Sunil Sharma, Advocate</strong></p>
-  <p>This website is for informational purposes only and does not constitute legal advice, solicitation, advertisement or inducement.</p>
+  <div class="wrap">
+    <p><strong>sSa Legal | Sunil Sharma, Advocate</strong></p>
+    <p>This website is for informational purposes only and does not constitute legal advice, solicitation, advertisement or inducement.</p>
+  </div>
 </footer>
 
 <script>
@@ -206,6 +277,9 @@ function acceptDisclaimer(){
 }
 if(localStorage.getItem("ssaDisclaimerAccepted")==="yes"){
   document.getElementById("disclaimer").style.display="none";
+}
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("open");
 }
 </script>
 
