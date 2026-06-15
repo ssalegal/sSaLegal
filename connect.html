@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sSa Legal | Connect With Us</title>
+<meta name="description" content="Connect with sSa Legal - Sunil Sharma, Advocate. Website, WhatsApp, email, social media and save contact details.">
+<style>
+:root{
+  --dark:#05070b;
+  --navy:#07101c;
+  --navy2:#0d1a2b;
+  --gold:#c9a24a;
+  --gold2:#e6c76f;
+  --cream:#f7f2e9;
+  --text:#111827;
+  --muted:#5f6470;
+  --line:#e5dccb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.header{
+  background:linear-gradient(90deg,#05070b,#07101c);
+  color:white;
+  border-bottom:1px solid rgba(201,162,74,.3);
+}
+.header-inner{
+  max-width:1220px;
+  margin:auto;
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo-wrap{display:flex;align-items:center;gap:18px;text-decoration:none;color:inherit}
+.logo-wrap img{height:74px;width:auto;display:block;filter:drop-shadow(0 0 8px rgba(201,162,74,.22));transition:.28s ease}
+.brand h2{font-size:30px;line-height:1.05;color:#f7f2e9;letter-spacing:.6px;text-shadow:0 6px 22px rgba(0,0,0,.28)}
+.brand p{font-family:Arial,sans-serif;font-size:13px;color:var(--gold2);letter-spacing:1.2px;text-transform:uppercase;margin-top:4px}
+
+.brand-link{
+  transition:.28s ease;
+}
+.brand-link:hover{
+  transform:translateY(-4px) scale(1.015);
+}
+.brand-link:hover img{
+  filter:drop-shadow(0 0 13px rgba(201,162,74,.48));
+}
+.brand-link:hover .brand h2{
+  color:var(--gold2);
+}
+
+.home-link{
+  font-family:Arial,sans-serif;
+  border:1px solid rgba(201,162,74,.55);
+  color:var(--gold2);
+  padding:10px 18px;
+  border-radius:8px;
+  transition:.25s;
+}
+.home-link:hover{background:var(--gold);color:#111;transform:translateY(-2px)}
+
+/* Hero */
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:white;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(201,162,74,.18),transparent 26%),
+    linear-gradient(120deg,rgba(5,7,11,.96),rgba(7,16,28,.88));
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.20),transparent),url("logo.png") no-repeat right -150px center;
+  background-size:520px;
+  opacity:.055;
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1220px;
+  margin:auto;
+  padding:76px 24px 70px;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:var(--gold2);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  margin-bottom:18px;
+}
+.tag:before,.tag:after{content:"";width:58px;height:1px;background:var(--gold)}
+.hero h1{
+  font-size:58px;
+  line-height:1.08;
+  margin-bottom:18px;
+  text-shadow:0 8px 30px rgba(0,0,0,.3);
+}
+.hero p{
+  max-width:760px;
+  margin:0 auto;
+  font-size:22px;
+  color:#e8e1d2;
+}
+
+/* Main */
+.main{padding:62px 24px 70px;background:var(--cream)}
+.wrap{max-width:1220px;margin:auto}
+.section-heading{text-align:center;margin-bottom:38px}
+.section-heading h2{font-size:40px;color:#07101c;margin-bottom:8px}
+.section-heading .decor{width:95px;height:2px;background:var(--gold);margin:12px auto;position:relative}
+.section-heading .decor:after{content:"◇";position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);background:var(--cream);color:var(--gold);font-size:20px;padding:0 8px}
+.section-heading p{font-family:Arial,sans-serif;font-size:16px;color:#424754}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.card{
+  background:rgba(255,255,255,.92);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:30px 24px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.25s ease;
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.card:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(0,0,0,.12);border-color:rgba(201,162,74,.55)}
+.icon{
+  width:58px;height:58px;
+  margin:0 auto 16px;
+  border:1px solid rgba(201,162,74,.6);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-size:28px;
+  font-weight:bold;
+}
+.card h3{font-size:25px;color:#07101c;margin-bottom:8px}
+.card p{font-family:Arial,sans-serif;color:#4d5360;font-size:15px;margin-bottom:18px;min-height:44px}
+.card a,.card button{
+  display:block;
+  width:100%;
+  background:#07101c;
+  color:white;
+  border:0;
+  border-radius:9px;
+  padding:13px 14px;
+  font-family:Arial,sans-serif;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.card a:hover,.card button:hover{background:var(--gold);color:#111;transform:translateY(-2px)}
+
+/* Info Strip */
+.info-strip{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr 1fr;
+  background:rgba(255,255,255,.82);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.04);
+}
+.info-box{padding:24px;border-right:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+.info-box:last-child{border-right:0}
+.info-icon{color:var(--gold);font-size:28px;line-height:1}
+.info-box h4{font-family:Arial,sans-serif;font-size:15px;color:#07101c;margin-bottom:4px}
+.info-box p{font-family:Arial,sans-serif;color:#3f4450;font-size:14px}
+.save-compact button{
+  margin-top:8px;
+  background:#07101c;color:white;border:0;border-radius:7px;padding:10px 16px;cursor:pointer;font-weight:bold;
+}
+.save-compact button:hover{background:var(--gold);color:#111}
+
+/* Footer */
+footer{
+  background:linear-gradient(90deg,#05070b,#07101c);
+  color:#ccc;
+  padding:34px 24px;
+  border-top:1px solid rgba(201,162,74,.28);
+}
+.footer-inner{max-width:1220px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.footer-logo{display:flex;align-items:center;gap:16px}
+.footer-logo img{height:54px}
+.footer-logo strong{color:white;font-size:22px}
+.footer-logo span{display:block;color:#d9c79b;font-family:Arial,sans-serif;font-size:13px}
+.footer-links{font-family:Arial,sans-serif;font-size:14px;text-align:right}
+.footer-links p{margin:4px 0}
+
+.fade{animation:fadeUp .85s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:1000px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .info-strip{grid-template-columns:1fr 1fr}
+  .info-box:nth-child(2){border-right:0}
+  .info-box:nth-child(1),.info-box:nth-child(2){border-bottom:1px solid var(--line)}
+  .hero h1{font-size:46px}
+}
+@media(max-width:640px){
+  .header-inner{justify-content:center;text-align:center;flex-direction:column;padding:16px}
+  .logo-wrap{flex-direction:column;gap:8px}
+  .logo-wrap img{height:82px}
+  .brand h2{font-size:26px}
+  .home-link{width:100%;text-align:center}
+  .hero-inner{padding:48px 18px}
+  .tag{font-size:11px;gap:9px}.tag:before,.tag:after{width:30px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:17px}
+  .main{padding:45px 18px 55px}
+  .section-heading h2{font-size:30px}
+  .grid{grid-template-columns:1fr}
+  .card{min-height:auto;padding:26px 20px}
+  .info-strip{grid-template-columns:1fr}
+  .info-box{border-right:0;border-bottom:1px solid var(--line)}
+  .info-box:last-child{border-bottom:0}
+  .footer-inner{flex-direction:column;text-align:center}.footer-links{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo-wrap brand-link" href="https://ssalegal.net" aria-label="Visit sSa Legal main website">
+      <img src="logo.png" alt="sSa Legal">
+      <div class="brand">
+        <h2>sSa Legal</h2>
+        <p>Sunil Sharma, Advocate</p>
+      </div>
+    </a>
+    <a class="home-link" href="https://ssalegal.net">Visit Main Website</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner fade">
+    <div class="tag">Connect With Us</div>
+    <h1>sSa Legal — Connect</h1>
+    <p>Access our website, contact details, WhatsApp and professional social platforms from one place.</p>
+  </div>
+</section>
+
+<main class="main">
+  <div class="wrap">
+    <div class="section-heading fade">
+      <h2>Explore. Connect. Stay Updated.</h2>
+      <div class="decor"></div>
+      <p>Scan, click, save contact, or connect through your preferred platform.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card fade">
+        <div><div class="icon">🌐</div><h3>Website</h3><p>Visit the official sSa Legal website.</p></div>
+        <a href="https://ssalegal.net">ssalegal.net</a>
+      </div>
+      <div class="card fade">
+        <div><div class="icon">✉</div><h3>Email</h3><p>Write to us directly for professional communication.</p></div>
+        <a href="mailto:office@ssalegal.net">office@ssalegal.net</a>
+      </div>
+      <div class="card fade">
+        <div><div class="icon">☏</div><h3>WhatsApp</h3><p>Connect instantly through WhatsApp.</p></div>
+        <a href="https://wa.me/919464150001">+91 94641 50001</a>
+      </div>
+      <div class="card fade">
+        <div><div class="icon">𝕏</div><h3>X</h3><p>Follow legal updates and public posts.</p></div>
+        <a href="https://x.com/sSa_Legal" target="_blank" rel="noopener noreferrer">@sSa_Legal</a>
+      </div>
+      <div class="card fade">
+        <div><div class="icon">in</div><h3>LinkedIn</h3><p>Connect professionally with Sunil Sharma, Advocate.</p></div>
+        <a href="https://www.linkedin.com/in/sunil-sharma-advocate-5b614b44/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      </div>
+      <div class="card fade">
+        <div><div class="icon">f</div><h3>Facebook</h3><p>Follow the official sSa Legal page.</p></div>
+        <a href="https://www.facebook.com/sSaLegalOfficial" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+      </div>
+    </div>
+
+    <div class="info-strip fade">
+      <div class="info-box">
+        <div class="info-icon">⌖</div>
+        <div><h4>Office</h4><p>Chamber No. 514, Yadwindra Complex<br>District Courts, Patiala, Punjab - 147001</p></div>
+      </div>
+      <div class="info-box">
+        <div class="info-icon">☎</div>
+        <div><h4>Call Us</h4><p>+91-94641-50001<br>office@ssalegal.net</p></div>
+      </div>
+      <div class="info-box">
+        <div class="info-icon">⚖</div>
+        <div><h4>Practice</h4><p>Litigation • Advisory<br>Legal Investigations</p></div>
+      </div>
+      <div class="info-box save-compact">
+        <div class="info-icon">⇩</div>
+        <div><h4>Save Contact</h4><p>Download vCard to save details.</p><button onclick="downloadVCard()">Download</button></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo.png" alt="sSa Legal">
+      <div><strong>sSa Legal</strong><span>Strategic Litigation. Practical Solutions.</span></div>
+    </div>
+    <div class="footer-links">
+      <p>© sSa Legal. All Rights Reserved.</p>
+      <p>This page is for contact and informational access only.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function downloadVCard(){
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:Sharma;Sunil;;;\nFN:Sunil Sharma\nORG:sSa Legal\nTITLE:Advocate\nTEL;TYPE=CELL:+919464150001\nEMAIL;TYPE=INTERNET:office@ssalegal.net\nURL:https://ssalegal.net\nADR;TYPE=WORK:;;Chamber No. 514, Yadwindra Complex, District Courts;Patiala;Punjab;147001;India\nX-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/sunil-sharma-advocate-5b614b44/\nX-SOCIALPROFILE;TYPE=x:https://x.com/sSa_Legal\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:"text/vcard"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Sunil-Sharma-sSa-Legal.vcf";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
