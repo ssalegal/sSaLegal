@@ -277,6 +277,61 @@ footer strong{color:white}
     }
 }
 
+.whatsapp-float{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff !important;
+
+    padding:14px 20px;
+    border-radius:999px;
+
+    font-family:Arial,sans-serif;
+    font-weight:700;
+    font-size:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    transition:all .3s ease;
+}
+
+.whatsapp-float:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.whatsapp-float svg{
+    width:22px;
+    height:22px;
+}
+
+@media(max-width:768px){
+    .whatsapp-float{
+        width:58px;
+        height:58px;
+        padding:0;
+        border-radius:50%;
+        justify-content:center;
+        right:16px;
+        bottom:16px;
+    }
+
+    .whatsapp-float span{
+        display:none;
+    }
+
+    .whatsapp-float svg{
+        width:28px;
+        height:28px;
+    }
+}
+
 </style>
 </head>
 
@@ -471,5 +526,19 @@ function toggleMenu(){
 }
 </script>
 
+<a class="whatsapp-float"
+   href="https://wa.me/919464150001?text=Hello%20sSa%20Legal%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20connect."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp">
+
+    <svg viewBox="0 0 32 32" fill="currentColor">
+        <path d="M19.11 17.24c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.47h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22 0 1.31.95 2.57 1.08 2.75.14.18 1.87 2.86 4.53 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.58-.65 1.8-1.28.22-.63.22-1.17.15-1.28-.07-.11-.24-.18-.51-.31z"/>
+        <path d="M16.01 3C8.83 3 3 8.82 3 16c0 2.54.74 5 2.13 7.1L3 29l6.08-1.99A12.93 12.93 0 0 0 16.01 29C23.18 29 29 23.18 29 16S23.18 3 16.01 3zm0 23.67c-2.13 0-4.21-.57-6.02-1.66l-.43-.25-3.61 1.18 1.18-3.52-.28-.45A10.63 10.63 0 1 1 16.01 26.67z"/>
+    </svg>
+
+    <span>WhatsApp</span>
+</a>
+  
 </body>
 </html>
