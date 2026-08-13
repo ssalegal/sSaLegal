@@ -388,35 +388,6 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 }
 
 
-/* Refined Practice Area cards */
-.section-intro{
-  max-width:760px;
-  margin:0 auto;
-  color:#555;
-  font-size:17px;
-}
-.practice-grid{grid-template-columns:repeat(5,1fr)}
-.practice-card{text-align:left;position:relative;overflow:hidden}
-.practice-card:before{
-  content:"";
-  position:absolute;
-  top:0;left:0;right:0;
-  height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2));
-}
-.card-kicker{
-  font:700 11px Arial,sans-serif;
-  text-transform:uppercase;
-  letter-spacing:1.3px;
-  color:#9b772b;
-  margin-bottom:12px;
-}
-.card-link{
-  margin-top:18px;
-  color:#9b772b;
-  font:700 13px Arial,sans-serif;
-}
-
 /* Legal Investigations */
 .legal-investigations-section{
   background:linear-gradient(135deg,#05070b,#08111f);
@@ -500,6 +471,121 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
   .investigation-card{grid-template-columns:48px 1fr;padding:20px}
 }
 
+
+/* PROFESSIONAL PRACTICE AREA CARDS */
+.section-intro{
+  max-width:780px;
+  margin:0 auto;
+  color:#5a5a5a;
+  font-size:17px;
+  line-height:1.75;
+}
+
+.practice-grid{
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  align-items:stretch;
+}
+
+.practice-card{
+  position:relative;
+  text-align:left;
+  min-height:255px;
+  padding:28px 26px 24px;
+  border:1px solid #e7dece;
+  border-radius:14px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(252,248,240,.96));
+  box-shadow:0 10px 24px rgba(0,0,0,.055);
+  display:flex !important;
+  flex-direction:column;
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  overflow:hidden;
+}
+
+.practice-card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#c9a24a,#e6c76f);
+}
+
+.practice-card:after{
+  content:"";
+  position:absolute;
+  right:-45px;
+  bottom:-65px;
+  width:150px;
+  height:150px;
+  border:1px solid rgba(201,162,74,.12);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.practice-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(0,0,0,.11);
+  border-color:rgba(201,162,74,.55);
+}
+
+.practice-card .card-kicker{
+  font:700 10px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1.6px;
+  color:#9a7526;
+  margin-bottom:15px;
+}
+
+.practice-card h3{
+  font-size:26px;
+  line-height:1.22;
+  color:#07101c;
+  margin-bottom:14px;
+}
+
+.practice-card p{
+  font-size:15.5px;
+  line-height:1.72;
+  color:#50545b;
+  margin:0;
+  flex:1;
+}
+
+.practice-card .card-link{
+  margin-top:22px;
+  padding-top:16px;
+  border-top:1px solid #ece3d3;
+  color:#8c671d;
+  font:700 12px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.75px;
+}
+
+@media(max-width:1050px){
+  .practice-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:700px){
+  .practice-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .practice-card{
+    min-height:auto;
+    padding:24px 21px 21px;
+  }
+
+  .practice-card h3{
+    font-size:23px;
+  }
+}
+
 </style>
 </head>
 
@@ -533,9 +619,9 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
           <a href="/criminal.html">Criminal</a>
           <a href="/insurance.html">Insurance</a>
           <a href="/banking.html">Banking</a>
+          <a href="/consumer-litigation.html">Consumer Litigation</a>
         </div>
       </div>
-
       <div class="nav-item"><span>Legal Investigations</span>
         <div class="dropdown">
           <a href="/legal-opinions.html">Legal Opinions</a>
@@ -544,7 +630,6 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
           <a href="/legal-due-diligence.html">Legal Due Diligence</a>
         </div>
       </div>
-
       <a href="/connect" class="connect-nav">Connect With Us</a>
     </nav>
   </div>
@@ -562,46 +647,15 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
   </div>
 </section>
 
-<section id="practice">
-  <div class="wrap center">
-    <div class="tag">Practice Areas</div>
-    <h2>Areas of Practice</h2>
-    <p class="section-intro">The practice is structured around focused areas of litigation and advisory work, with strategy developed from the facts, documents and practical circumstances of each matter.</p>
-
-    <div class="grid practice-grid">
-      <a class="card practice-card" href="/matrimonial.html">
-        <div class="card-kicker">Practice Area</div>
-        <h3>Matrimonial</h3>
-        <p>Matrimonial and family disputes handled with a strategy shaped around the client’s circumstances, legal rights and the practical realities of family litigation, including NRI and overseas matters.</p>
-        <div class="card-link">Read More →</div>
-      </a>
-      <a class="card practice-card" href="/property-financial-disputes.html">
-        <div class="card-kicker">Practice Area</div>
-        <h3>Property / Financial Disputes</h3>
-        <p>Strategic handling of property, contractual and financial disputes, with emphasis on transparency, risk assessment, protection of rights and commercially sensible outcomes.</p>
-        <div class="card-link">Read More →</div>
-      </a>
-      <a class="card practice-card" href="/criminal.html">
-        <div class="card-kicker">Practice Area</div>
-        <h3>Criminal</h3>
-        <p>Strategic criminal defence in document-intensive, financial, professional and commercial matters, including white-collar allegations and disputes acquiring criminal dimensions.</p>
-        <div class="card-link">Read More →</div>
-      </a>
-      <a class="card practice-card" href="/insurance.html">
-        <div class="card-kicker">Practice Area</div>
-        <h3>Insurance</h3>
-        <p>Insurance litigation, claim assessment and cross-border investigative work concerning insurers, insured persons and beneficiaries, including verification of claims and supporting records.</p>
-        <div class="card-link">Read More →</div>
-      </a>
-      <a class="card practice-card" href="/banking.html">
-        <div class="card-kicker">Practice Area</div>
-        <h3>Banking</h3>
-        <p>Legal scrutiny, documentation review and litigation involving banks, borrowers and consumers, including loan documentation, recovery disputes and unauthorised or fraudulent transactions.</p>
-        <div class="card-link">Read More →</div>
-      </a>
-    </div>
-  </div>
-</section>
+<section id="practice"><div class="wrap center">
+<div class="tag">Practice Areas</div><h2>Areas of Practice</h2>
+<p class="section-intro">The practice is structured around focused areas of litigation and advisory work, with strategy developed from the facts, documents and practical circumstances of each matter.</p>
+<div class="grid practice-grid"><a class="card practice-card" href="/matrimonial.html"><div class="card-kicker">Practice Area</div><h3>Matrimonial</h3><p>Matrimonial and family disputes with particular experience in NRI and overseas matters, while providing the same strategic and consultative approach to clients based in India.</p><div class="card-link">Read More →</div></a>
+<a class="card practice-card" href="/property-financial-disputes.html"><div class="card-kicker">Practice Area</div><h3>Property / Financial Disputes</h3><p>Property, contractual and financial disputes approached through documentary analysis, transparent risk assessment and commercially sensible strategy.</p><div class="card-link">Read More →</div></a>
+<a class="card practice-card" href="/criminal.html"><div class="card-kicker">Practice Area</div><h3>Criminal</h3><p>Strategic defence in economic, financial, professional and document-intensive criminal proceedings, including white-collar allegations.</p><div class="card-link">Read More →</div></a>
+<a class="card practice-card" href="/insurance.html"><div class="card-kicker">Practice Area</div><h3>Insurance</h3><p>Cross-border insurance claim verification and investigation, together with insurance litigation and claim assessment concerning insurers, insured persons and beneficiaries in India.</p><div class="card-link">Read More →</div></a>
+<a class="card practice-card" href="/banking.html"><div class="card-kicker">Practice Area</div><h3>Banking</h3><p>Legal scrutiny, documentation and litigation involving banks, borrowers and consumers, including recovery, fraud and unauthorised transaction disputes.</p><div class="card-link">Read More →</div></a>
+<a class="card practice-card" href="/consumer-litigation.html"><div class="card-kicker">Practice Area</div><h3>Consumer Litigation</h3><p>Consumer disputes involving defective goods, deficient services, warranties, e-commerce, automobiles, banking and other substantial purchases or services.</p><div class="card-link">Read More →</div></a></div></div></section>
 
 <section id="legal-investigations" class="legal-investigations-section">
   <div class="wrap legal-investigations-wrap">
