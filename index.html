@@ -387,6 +387,119 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
   }
 }
 
+
+/* Refined Practice Area cards */
+.section-intro{
+  max-width:760px;
+  margin:0 auto;
+  color:#555;
+  font-size:17px;
+}
+.practice-grid{grid-template-columns:repeat(5,1fr)}
+.practice-card{text-align:left;position:relative;overflow:hidden}
+.practice-card:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+}
+.card-kicker{
+  font:700 11px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  color:#9b772b;
+  margin-bottom:12px;
+}
+.card-link{
+  margin-top:18px;
+  color:#9b772b;
+  font:700 13px Arial,sans-serif;
+}
+
+/* Legal Investigations */
+.legal-investigations-section{
+  background:linear-gradient(135deg,#05070b,#08111f);
+  color:white;
+}
+.legal-investigations-wrap{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:58px;
+  align-items:start;
+}
+.legal-investigations-intro{
+  position:sticky;
+  top:120px;
+}
+.legal-investigations-intro h2{
+  color:white;
+  font-size:42px;
+  line-height:1.12;
+}
+.legal-investigations-intro p{
+  color:#d2cab9;
+  font-size:17px;
+  line-height:1.8;
+  margin-top:18px;
+}
+.investigation-list{
+  display:grid;
+  gap:16px;
+}
+.investigation-card{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:20px;
+  align-items:start;
+  padding:24px;
+  border:1px solid rgba(201,162,74,.24);
+  background:rgba(255,255,255,.045);
+  transition:.28s ease;
+}
+.investigation-card:hover{
+  transform:translateX(7px);
+  border-color:rgba(201,162,74,.58);
+  background:rgba(255,255,255,.075);
+}
+.investigation-number{
+  color:var(--gold);
+  font:700 16px Arial,sans-serif;
+  letter-spacing:1px;
+  padding-top:3px;
+}
+.investigation-card h3{
+  color:white;
+  font-size:25px;
+  margin-bottom:8px;
+}
+.investigation-card p{
+  color:#cfc7b6;
+  font-size:15px;
+  line-height:1.7;
+}
+.investigation-card span{
+  display:inline-block;
+  margin-top:13px;
+  color:var(--gold2);
+  font:700 12px Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+@media(max-width:1100px){
+  .practice-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .legal-investigations-wrap{grid-template-columns:1fr}
+  .legal-investigations-intro{position:static}
+}
+@media(max-width:760px){
+  .practice-grid{grid-template-columns:1fr}
+  .legal-investigations-intro h2{font-size:32px}
+  .investigation-card{grid-template-columns:48px 1fr;padding:20px}
+}
+
 </style>
 </head>
 
@@ -415,31 +528,24 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
     <nav id="navMenu">
       <div class="nav-item"><span>Practice Areas</span>
         <div class="dropdown">
-          <a href="matrimonial.html">Matrimonial</a>
-          <a href="property-financial-disputes.html">Property / Financial Disputes</a>
-          <a href="criminal.html">Criminal</a>
-          <a href="insurance-banking.html">Insurance and Banking</a>
+          <a href="/matrimonial.html">Matrimonial</a>
+          <a href="/property-financial-disputes.html">Property / Financial Disputes</a>
+          <a href="/criminal.html">Criminal</a>
+          <a href="/insurance.html">Insurance</a>
+          <a href="/banking.html">Banking</a>
         </div>
       </div>
 
       <div class="nav-item"><span>Legal Investigations</span>
         <div class="dropdown">
-          <a href="legal-opinions.html">Legal Opinions</a>
-          <a href="legal-investigations.html">Legal Investigations</a>
-          <a href="document-title-search.html">Document and Title Search</a>
-          <a href="legal-due-diligence.html">Legal Due Diligence</a>
-          <a href="financial-due-diligence.html">Financial Due Diligence</a>
+          <a href="/legal-opinions.html">Legal Opinions</a>
+          <a href="/legal-investigations.html">Legal Investigations</a>
+          <a href="/document-title-search.html">Document and Title Search</a>
+          <a href="/legal-due-diligence.html">Legal Due Diligence</a>
         </div>
       </div>
 
-      <div class="nav-item"><span>Legal Updates</span>
-        <div class="dropdown">
-          <a href="#updates">Newsletters</a>
-          <a href="#updates">Legal Updates</a>
-        </div>
-      </div>
-
-      <a href="https://ssalegal.net/connect" class="connect-nav">Connect With Us</a>
+      <a href="/connect" class="connect-nav">Connect With Us</a>
     </nav>
   </div>
 </header>
@@ -460,86 +566,89 @@ a.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
   <div class="wrap center">
     <div class="tag">Practice Areas</div>
     <h2>Areas of Practice</h2>
-    <div class="grid">
-      <a class="card" href="matrimonial.html"><h3>Matrimonial</h3><p>Representation and advisory in matrimonial and family disputes, including divorce, maintenance, custody, residence rights and related proceedings.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Practice Area →</div></a>
-      <a class="card" href="property-financial-disputes.html"><h3>Property / Financial Disputes</h3><p>Litigation and advisory concerning property rights, documentation, financial claims and connected civil disputes.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Practice Area →</div></a>
-      <a class="card" href="criminal.html"><h3>Criminal</h3><p>Criminal defence and litigation strategy before trial courts and appellate forums.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Practice Area →</div></a>
-      <a class="card" href="insurance-banking.html"><h3>Insurance and Banking</h3><p>Legal services relating to insurance claims, banking disputes, claim scrutiny and connected litigation.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Practice Area →</div></a>
-      <a class="card" href="legal-opinions.html"><h3>Legal Opinions</h3><p>Structured legal opinions based on the available facts, documents, applicable law and verification material.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Service →</div></a>
-      <a class="card" href="legal-investigations.html"><h3>Legal Investigations</h3><p>Independent legal investigation assignments involving fact verification, field inquiry, document review and structured reporting.</p><div style="margin-top:16px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">View Service →</div></a>
+    <p class="section-intro">The practice is structured around focused areas of litigation and advisory work, with strategy developed from the facts, documents and practical circumstances of each matter.</p>
+
+    <div class="grid practice-grid">
+      <a class="card practice-card" href="/matrimonial.html">
+        <div class="card-kicker">Practice Area</div>
+        <h3>Matrimonial</h3>
+        <p>Matrimonial and family disputes handled with a strategy shaped around the client’s circumstances, legal rights and the practical realities of family litigation, including NRI and overseas matters.</p>
+        <div class="card-link">Read More →</div>
+      </a>
+      <a class="card practice-card" href="/property-financial-disputes.html">
+        <div class="card-kicker">Practice Area</div>
+        <h3>Property / Financial Disputes</h3>
+        <p>Strategic handling of property, contractual and financial disputes, with emphasis on transparency, risk assessment, protection of rights and commercially sensible outcomes.</p>
+        <div class="card-link">Read More →</div>
+      </a>
+      <a class="card practice-card" href="/criminal.html">
+        <div class="card-kicker">Practice Area</div>
+        <h3>Criminal</h3>
+        <p>Strategic criminal defence in document-intensive, financial, professional and commercial matters, including white-collar allegations and disputes acquiring criminal dimensions.</p>
+        <div class="card-link">Read More →</div>
+      </a>
+      <a class="card practice-card" href="/insurance.html">
+        <div class="card-kicker">Practice Area</div>
+        <h3>Insurance</h3>
+        <p>Insurance litigation, claim assessment and cross-border investigative work concerning insurers, insured persons and beneficiaries, including verification of claims and supporting records.</p>
+        <div class="card-link">Read More →</div>
+      </a>
+      <a class="card practice-card" href="/banking.html">
+        <div class="card-kicker">Practice Area</div>
+        <h3>Banking</h3>
+        <p>Legal scrutiny, documentation review and litigation involving banks, borrowers and consumers, including loan documentation, recovery disputes and unauthorised or fraudulent transactions.</p>
+        <div class="card-link">Read More →</div>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="about">
-  <div class="wrap about-grid">
-    <div>
-      <div class="tag">Experience</div>
-      <h2>Sunil Sharma, Advocate</h2>
-      <p style="margin:20px 0 35px 0;font-size:20px;">
-        17+ years of litigation experience before District Courts, Tribunals, the Punjab & Haryana High Court, Delhi High Court and the Supreme Court of India.
-      </p>
-      <div class="about-ssa">
-    <h3>About sSa Legal</h3>
-
-    <p>
-        sSa Legal is the independent practice of Sunil Sharma, Advocate,
-        providing litigation, advisory, and legal investigation services across India.
-    </p>
-
-    <p>
-        The practice focuses on complex matrimonial disputes, criminal defense,
-        property matters, consumer litigation, insurance claims, banking disputes,
-        financial due diligence, and legal investigative & due diligence assignments,
-        including title searches, document searches, and document authentication.
-    </p>
-
-    <p>
-        With over 17+ years of courtroom and field experience, the firm is
-        committed to delivering practical, commercially sound, and legally
-        sustainable solutions while maintaining the highest standards of
-        professional ethics and confidentiality.
-    </p>
-
-   <div class="social-links">
-    <a href="https://www.linkedin.com/in/sunil-sharma-advocate-5b614b44/" target="_blank" rel="noopener noreferrer">
-    LinkedIn Profile
-</a>
-
-    <a href="https://x.com/sSaLegal_" target="_blank">
-        X Profile
-    </a>
-
-    <a href="https://www.facebook.com/sSaLegalOfficial" target="_blank">
-        Facebook Page
-    </a>
-</div>
-</div>
-    </div>
-
-    <div>
+<section id="legal-investigations" class="legal-investigations-section">
+  <div class="wrap legal-investigations-wrap">
+    <div class="legal-investigations-intro">
       <div class="tag">Legal Investigations</div>
-      <a class="card" href="legal-opinions.html" style="display:block;margin-bottom:18px;"><h3>Legal Opinions</h3><p>Structured legal opinions based on the available facts, documents, applicable law and verification material.</p><div style="margin-top:12px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">Learn More →</div></a>
-      <a class="card" href="legal-investigations.html" style="display:block;margin-bottom:18px;"><h3>Legal Investigations</h3><p>Independent legal investigation assignments involving fact verification, field inquiry, document review and structured reporting.</p><div style="margin-top:12px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">Learn More →</div></a>
-      <a class="card" href="document-title-search.html" style="display:block;margin-bottom:18px;"><h3>Document and Title Search</h3><p>Verification of records, certificates, ownership documents and title-related material from relevant sources.</p><div style="margin-top:12px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">Learn More →</div></a>
-      <a class="card" href="legal-due-diligence.html" style="display:block;margin-bottom:18px;"><h3>Legal Due Diligence</h3><p>Assessment of legal risk, compliance, documentation and material inconsistencies before a transaction or decision.</p><div style="margin-top:12px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">Learn More →</div></a>
-      <a class="card" href="financial-due-diligence.html" style="display:block;margin-bottom:18px;"><h3>Financial Due Diligence</h3><p>Review of financial dependency, transactions, supporting records and claim-related financial material.</p><div style="margin-top:12px;color:#c9a24a;font-family:Arial,sans-serif;font-weight:700;font-size:13px;">Learn More →</div></a>
+      <h2>Verification. Due Diligence. Legal Assessment.</h2>
+      <p>Legal investigations at sSa Legal are directed by the legal issue behind the evidence. The objective is not merely to collect information, but to identify what requires verification, the competent source from which it should be verified, and the legal significance of the resulting material.</p>
+    </div>
+
+    <div class="investigation-list">
+        <a class="investigation-card" href="/legal-opinions.html">
+          <div class="investigation-number">01</div>
+          <div>
+            <h3>Legal Opinions</h3>
+            <p>Reasoned legal opinions addressing applicable law, evidentiary strengths and weaknesses, procedural risks and the practical consequences of available legal strategies.</p>
+            <span>Explore Service →</span>
+          </div>
+        </a>
+        <a class="investigation-card" href="/legal-investigations.html">
+          <div class="investigation-number">02</div>
+          <div>
+            <h3>Legal Investigations</h3>
+            <p>Legally directed factual and documentary verification focused on authenticity, source records, evidentiary significance and the legal effect of disputed material.</p>
+            <span>Explore Service →</span>
+          </div>
+        </a>
+        <a class="investigation-card" href="/document-title-search.html">
+          <div class="investigation-number">03</div>
+          <div>
+            <h3>Document and Title Search</h3>
+            <p>Verification of property title, ownership records, documents, certificates and institutional records with attention to source, continuity, inconsistencies and legal risk.</p>
+            <span>Explore Service →</span>
+          </div>
+        </a>
+        <a class="investigation-card" href="/legal-due-diligence.html">
+          <div class="investigation-number">04</div>
+          <div>
+            <h3>Legal Due Diligence</h3>
+            <p>Structured examination of documents, legal exposure and material gaps before significant transactions, claims or decisions are undertaken.</p>
+            <span>Explore Service →</span>
+          </div>
+        </a>
     </div>
   </div>
 </section>
 
-<section id="updates" class="updates">
-  <div class="wrap">
-    <div class="tag">Legal Updates & Newsletters</div>
-    <h2>Recent Legal Notes</h2>
 
-    <div class="grid">
-      <div class="card"><h3>Maintenance Law</h3><p>Updates and notes on interim maintenance, disclosure affidavits and dependency.</p></div>
-      <div class="card"><h3>Matrimonial Litigation</h3><p>Case notes on divorce, custody, residence rights and related proceedings.</p></div>
-      <div class="card"><h3>Investigation Insights</h3><p>Practical notes on document verification, claim scrutiny and field inquiries.</p></div>
-    </div>
-  </div>
-</section>
 
 <section id="contact" class="contact">
   <div class="wrap">
